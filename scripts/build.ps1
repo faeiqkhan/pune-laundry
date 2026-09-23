@@ -1,4 +1,4 @@
-# Build script for Cloth n Care (run on the dev machine, not the client PC)
+# Build script for Pune Laundry (run on the dev machine, not the client PC)
 # Builds the React frontend, copies it into the Spring Boot static resources,
 # packages the backend jar, and assembles a self-contained release folder
 # (scripts\..\release) that can be copied to the client's PC.
@@ -9,8 +9,8 @@
 $ErrorActionPreference = "Stop"
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$frontend = Join-Path $repoRoot "ClothNCareFrontend\cloth-n-care-ui"
-$backend  = Join-Path $repoRoot "ClothNCare\ClothNCare"
+$frontend = Join-Path $repoRoot "frontend"
+$backend  = Join-Path $repoRoot "backend"
 $release  = Join-Path $repoRoot "release"
 
 # ---------------------------------------------------------------- Java
@@ -91,7 +91,7 @@ if (-not $jar) {
 Write-Host "`nAssembling release folder..." -ForegroundColor Cyan
 New-Item -ItemType Directory -Path $release -Force | Out-Null
 
-Copy-Item $jar.FullName (Join-Path $release "ClothNCare.jar")
+Copy-Item $jar.FullName (Join-Path $release "PuneLaundry.jar")
 Copy-Item (Join-Path $PSScriptRoot "start.bat") (Join-Path $release "start.bat")
 Copy-Item (Join-Path $PSScriptRoot "README-CLIENT.txt") (Join-Path $release "README-CLIENT.txt")
 New-Item -ItemType Directory -Path (Join-Path $release "invoices") -Force | Out-Null
@@ -159,12 +159,12 @@ if (Test-Path (Join-Path $nodeStaging "node.exe")) {
 
 # Seed the release with a database only when the release has none yet, so a
 # running/deployed app keeps its own data (and no file-lock errors occur).
-if (Test-Path "$backend\data\clothncare.db") {
+if (Test-Path "$backend\data\punelaundry.db") {
     New-Item -ItemType Directory -Path (Join-Path $release "data") -Force | Out-Null
-    if (Test-Path (Join-Path $release "data\clothncare.db")) {
-        Write-Host "Keeping existing release data (release\data\clothncare.db). Delete it first to seed from the dev database." -ForegroundColor Cyan
+    if (Test-Path (Join-Path $release "data\punelaundry.db")) {
+        Write-Host "Keeping existing release data (release\data\punelaundry.db). Delete it first to seed from the dev database." -ForegroundColor Cyan
     } else {
-        Copy-Item "$backend\data\clothncare.db" (Join-Path $release "data\clothncare.db") -Force
+        Copy-Item "$backend\data\punelaundry.db" (Join-Path $release "data\punelaundry.db") -Force
     }
 } else {
     New-Item -ItemType Directory -Path (Join-Path $release "data") -Force | Out-Null

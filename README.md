@@ -5,10 +5,10 @@ PC and be used from any device on their private network. No cloud hosting.
 
 ## Architecture
 
-- **Backend** (`ClothNCare/`): Spring Boot 4 (Java 17+) + SQLite + JWT auth.
+- **Backend** (`backend/`): Spring Boot 4 (Java 17+) + SQLite + JWT auth.
   REST API for auth, customers, orders, services, dashboard analytics, and PDF
   invoice generation. Serves the built React frontend from static resources.
-- **Frontend** (`ClothNCareFrontend/cloth-n-care-ui/`): React 19 + Vite +
+- **Frontend** (`frontend/`): React 19 + Vite +
   TypeScript. Single-page app with login, dashboard, orders (invoice
   download/print, order tag printing), customers, and services.
 - The whole app is one JAR; frontend is bundled into it at build time.
@@ -18,7 +18,7 @@ PC and be used from any device on their private network. No cloud hosting.
 Frontend (dev, port 5173, talks directly to the backend on port 8080):
 
 ```
-cd ClothNCareFrontend/cloth-n-care-ui
+cd frontend
 npm install
 npm run dev
 ```
@@ -26,7 +26,7 @@ npm run dev
 Backend:
 
 ```
-cd ClothNCare/ClothNCare
+cd backend
 $env:JWT_SECRET_KEY = "some-secret-at-least-32-chars"
 .\mvnw.cmd spring-boot:run
 ```
@@ -47,7 +47,7 @@ the JAR, and assembles `release/`:
 
 ```
 release/
-  ClothNCare.jar        # the whole app
+  PuneLaundry.jar       # the whole app
   start.bat             # double-click launcher (generates JWT secret on first run)
   README-CLIENT.txt     # plain-English instructions for the client
   data/                 # SQLite database (seeded from dev DB if present)

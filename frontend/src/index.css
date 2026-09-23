@@ -1,0 +1,168 @@
+:root {
+  /* Pune Laundry theme — flat, squared, warm paper + solid blue.
+     Same variable names as before, so every page stylesheet keeps working. */
+  --primary: #1a56db;
+  --primary-dark: #1e429f;
+  --primary-darker: #233876;
+  --primary-50: #ebf5ff;
+  --primary-100: #e1effe;
+  --primary-200: #c3ddfd;
+
+  --success: #0e9f6e;
+  --success-dark: #057a55;
+  --success-50: #def7ec;
+  --success-100: #bcf0da;
+  --success-200: #84e1bc;
+
+  --warning: #c27803;
+  --warning-50: #fdf6ec;
+  --warning-100: #f9e9cf;
+
+  --danger: #e02424;
+  --danger-50: #fdecec;
+  --danger-100: #f8bcbc;
+
+  --info: #1c64f2;
+  --info-50: #ebf5ff;
+  --info-100: #e1effe;
+
+  --purple: #9061f9;
+  --purple-50: #f5ebff;
+  --purple-100: #ecd9fd;
+
+  --teal: #0e7490;
+  --teal-50: #e3f6fa;
+  --teal-100: #c3ecf5;
+
+  --rose: #e74694;
+  --rose-50: #fce8f3;
+  --rose-100: #fbd0e4;
+
+  --amber: #faca15;
+  --amber-50: #fdf6b2;
+  --amber-100: #fce96a;
+
+  /* Warm stone ramp instead of cool slate */
+  --slate-900: #1c1917;
+  --slate-800: #292524;
+  --slate-700: #44403c;
+  --slate-600: #57534e;
+  --slate-500: #78716c;
+  --slate-400: #a8a29e;
+  --slate-300: #d6d3d1;
+  --slate-200: #e7e5e4;
+  --slate-100: #f0eeea;
+  --slate-50: #f7f5f1;
+
+  --bg: #f4f2ec;
+  --surface: #ffffff;
+  --border: #e2ded4;
+  --white: #ffffff;
+
+  /* Squared, flat, print-ledger feel */
+  --radius-lg: 5px;
+  --radius: 3px;
+  --radius-sm: 2px;
+
+  --shadow-sm: none;
+  --shadow: 0 1px 2px rgba(28, 25, 23, 0.07);
+  --shadow-lg: 0 10px 30px rgba(28, 25, 23, 0.18);
+  --shadow-primary: 0 1px 2px rgba(26, 86, 219, 0.28);
+
+  /* Light sidebar instead of the dark gradient one */
+  --sidebar-bg: #fbfaf7;
+  --sidebar-width: 236px;
+
+  --font: "Outfit", "Segoe UI", -apple-system, system-ui, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--slate-800);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--slate-800);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--slate-900);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+}
+
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::placeholder {
+  color: var(--slate-400);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background: var(--slate-300);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--slate-400);
+  background-clip: padding-box;
+}
+
+#root {
+  width: 100%;
+}

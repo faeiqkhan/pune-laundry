@@ -1,5 +1,5 @@
 @echo off
-rem Cloth n Care - LAN launcher (double-click this file)
+rem Pune Laundry - LAN launcher (double-click this file)
 rem Build once on a dev machine with scripts\build.ps1, copy this
 rem whole folder to the client PC, then run start.bat.
 rem Java is bundled in the "jre" folder - no installation needed.
@@ -82,7 +82,7 @@ rem ------------------------------------------------------------------
 netstat -ano | findstr /r /c:":8080 .*LISTENING" >nul 2>nul
 if not errorlevel 1 (
   echo.
-  echo Cloth n Care is already running on port 8080.
+  echo Pune Laundry is already running on port 8080.
   echo Open http://localhost:8080 in your browser, or stop the existing
   echo window before starting a new instance.
   echo.
@@ -91,7 +91,7 @@ if not errorlevel 1 (
 )
 
 echo.
-echo Starting Cloth n Care...
+echo Starting Pune Laundry...
 echo   - On this PC:      http://localhost:8080
 if defined LAN_IP (
   echo   - Other devices:   http://%LAN_IP%:8080  ^(same WiFi/LAN network^)
@@ -100,6 +100,6 @@ if defined LAN_IP (
 )
 echo   - Close this window to stop the app.
 echo.
-"%JAVA_EXE%" -jar ClothNCare.jar
+"%JAVA_EXE%" -jar PuneLaundry.jar
 
 pause
