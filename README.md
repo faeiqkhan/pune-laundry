@@ -1,6 +1,6 @@
-# Cloth & Care
+# Cloth & Care Pune
 
-Laundry management app for a small business, designed to run on the client's own
+Laundry management app for Cloth & Care Pune, designed to run on the client's own
 PC and be used from any device on their private network. No cloud hosting.
 
 ## Architecture
@@ -47,7 +47,7 @@ the JAR, and assembles `release/`:
 
 ```
 release/
-  PuneLaundry.jar       # the whole app
+  ClothNCarePune.jar    # the whole app (also copied as ClothNCarePuneLaundry.jar / PuneLaundry.jar)
   start.bat             # double-click launcher (generates JWT secret on first run)
   README-CLIENT.txt     # plain-English instructions for the client
   data/                 # SQLite database (seeded from dev DB if present)
@@ -74,6 +74,6 @@ other devices on the same network at `http://<PC-IP>:8080`.
 
 ## Backups
 
-The only data store is `data/clothncare.db` next to the JAR. Back it up by
+The only data store is `data/punelaundry.db` next to the JAR. Back it up by
 copying the `data` folder while the app is stopped (or occasionally while
 running — SQLite is safe to copy in WAL-off mode).

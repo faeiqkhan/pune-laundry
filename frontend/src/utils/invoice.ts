@@ -112,7 +112,7 @@ export const printOrderTag = (order: {
     .map(
       (row) => `
         <div class="tag">
-          <div class="brand">Cloth &amp; Care</div>
+          <div class="brand">Cloth &amp; Care Pune</div>
           <div class="service">${escapeHtml(row.service)}</div>
           <div class="garment">${escapeHtml(row.garment)}</div>
           <div class="invoice">${escapeHtml(invoiceNo)}</div>

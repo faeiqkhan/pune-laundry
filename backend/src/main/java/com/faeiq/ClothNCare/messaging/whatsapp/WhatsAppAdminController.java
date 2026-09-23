@@ -118,6 +118,6 @@ public class WhatsAppAdminController {
     private String businessName() {
         AppSettings settings = settingsService.getSettings();
         return settings.getBusinessName() == null || settings.getBusinessName().isBlank()
-                ? "Cloth n Care" : settings.getBusinessName();
+                ? "Cloth & Care Pune" : settings.getBusinessName();
     }
 }

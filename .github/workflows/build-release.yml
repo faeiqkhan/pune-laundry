@@ -86,6 +86,8 @@ jobs:
       - name: Assemble release folder
         run: |
           mkdir -p release/data release/invoices
+          cp backend/target/ClothNCare-*.jar release/ClothNCarePune.jar
+          cp backend/target/ClothNCare-*.jar release/ClothNCarePuneLaundry.jar
           cp backend/target/ClothNCare-*.jar release/PuneLaundry.jar
           cp scripts/start.bat release/start.bat
           cp scripts/README-CLIENT.txt release/README-CLIENT.txt
@@ -104,26 +106,26 @@ jobs:
       - name: Zip release
         run: |
           cd release
-          zip -q -r ../PuneLaundry-${{ steps.version.outputs.version }}.zip .
+          zip -q -r ../ClothNCarePune-${{ steps.version.outputs.version }}.zip .
           cd ..
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PuneLaundry-${{ steps.version.outputs.version }}
-          path: PuneLaundry-${{ steps.version.outputs.version }}.zip
+          name: ClothNCarePune-${{ steps.version.outputs.version }}
+          path: ClothNCarePune-${{ steps.version.outputs.version }}.zip
           if-no-files-found: error
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: release-${{ steps.version.outputs.version }}
-          name: Pune Laundry ${{ steps.version.outputs.version }}
+          name: Cloth & Care Pune ${{ steps.version.outputs.version }}
           body: |
             Release built from `${{ github.sha }}`.
 
-            Download `PuneLaundry-${{ steps.version.outputs.version }}.zip`, unzip it
+            Download `ClothNCarePune-${{ steps.version.outputs.version }}.zip`, unzip it
             on the client PC, and double-click `start.bat`. Java and Node.js are
             bundled.
-          files: PuneLaundry-${{ steps.version.outputs.version }}.zip
+          files: ClothNCarePune-${{ steps.version.outputs.version }}.zip
           fail_on_unmatched_files: true

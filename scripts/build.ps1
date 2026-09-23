@@ -1,4 +1,4 @@
-# Build script for Pune Laundry (run on the dev machine, not the client PC)
+# Build script for Cloth & Care Pune (run on the dev machine, not the client PC)
 # Builds the React frontend, copies it into the Spring Boot static resources,
 # packages the backend jar, and assembles a self-contained release folder
 # (scripts\..\release) that can be copied to the client's PC.
@@ -91,6 +91,8 @@ if (-not $jar) {
 Write-Host "`nAssembling release folder..." -ForegroundColor Cyan
 New-Item -ItemType Directory -Path $release -Force | Out-Null
 
+Copy-Item $jar.FullName (Join-Path $release "ClothNCarePune.jar")
+Copy-Item $jar.FullName (Join-Path $release "ClothNCarePuneLaundry.jar")
 Copy-Item $jar.FullName (Join-Path $release "PuneLaundry.jar")
 Copy-Item (Join-Path $PSScriptRoot "start.bat") (Join-Path $release "start.bat")
 Copy-Item (Join-Path $PSScriptRoot "README-CLIENT.txt") (Join-Path $release "README-CLIENT.txt")

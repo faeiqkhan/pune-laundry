@@ -65,7 +65,7 @@ export default function Topbar({
   const role = user?.role ?? "STAFF";
   const lanUrl = getLanUrl();
 
-  const title = pageTitles[location.pathname] ?? "Pune Laundry";
+  const title = pageTitles[location.pathname] ?? "Cloth & Care Pune";
 
   const handleLogout = async () => {
     const refreshToken = localStorage.getItem("refreshToken");

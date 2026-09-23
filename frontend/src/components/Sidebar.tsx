@@ -196,8 +196,8 @@ export default function Sidebar() {
           <Icon name="shirt" size={22} />
         </div>
         <div className="sidebar-brand-text">
-          <span className="sidebar-brand-name">Pune Laundry</span>
-          <span className="sidebar-brand-tagline">Pune &amp; Dry Cleaning</span>
+          <span className="sidebar-brand-name">Cloth &amp; Care Pune</span>
+          <span className="sidebar-brand-tagline">Laundry &amp; Dry Cleaning</span>
         </div>
       </div>
 

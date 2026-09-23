@@ -72,7 +72,7 @@ export default function Register() {
   return (
     <main className="login-page">
       <section className="login-card" aria-labelledby="register-title">
-        <h1 id="register-title">Cloth n Care Register</h1>
+        <h1 id="register-title">Cloth &amp; Care Pune Register</h1>
 
         {error && (
           <div

@@ -1,6 +1,6 @@
-# Pune Laundry - Client Setup
+# Cloth & Care Pune - Client Setup
 
-Thank you for using Pune Laundry! This folder contains everything needed to run
+Thank you for using Cloth & Care Pune! This folder contains everything needed to run
 the app on one computer and use it from any device on the same network.
 
 ## Requirements
@@ -13,13 +13,13 @@ the app on one computer and use it from any device on the same network.
 ## First-time setup (do once)
 
 1. Copy this whole folder to the computer that will run the app
-   (for example to C:\PuneLaundry).
+   (for example to C:\ClothAndCarePune).
 2. Double-click `start.bat`.
 
 ## Daily use
 
 1. Double-click `start.bat` and wait for the line
-   `Pune Laundry` to finish starting (a few seconds).
+   `Cloth & Care Pune` to finish starting (a few seconds).
 2. On this computer open your browser and go to `http://localhost:8080`.
 3. On phones / other computers connected to the SAME WiFi or network,
    open `http://THE-COMPUTER-IP:8080` in a browser.

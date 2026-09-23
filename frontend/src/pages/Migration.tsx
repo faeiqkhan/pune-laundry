@@ -530,7 +530,7 @@ export default function MigrationPage() {
       <div className="page-header">
         <div className="page-header-text">
           <h1>Data Migration</h1>
-          <p>Swash → ClothNCare import service</p>
+          <p>Swash → Cloth &amp; Care Pune import service</p>
         </div>
         <div className="page-header-actions">
           <button

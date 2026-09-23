@@ -61,7 +61,7 @@ export default function Login() {
   return (
     <main className="login-page">
       <section className="login-card" aria-labelledby="login-title">
-        <h1 id="login-title">Pune Laundry Login</h1>
+        <h1 id="login-title">Cloth &amp; Care Pune</h1>
         <div className="network-card">
           <span className="network-card-label">Access from other devices</span>
           <span className="network-card-url">{lanUrl}</span>

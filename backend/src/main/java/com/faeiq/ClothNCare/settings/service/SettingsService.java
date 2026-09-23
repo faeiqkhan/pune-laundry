@@ -17,8 +17,11 @@ public class SettingsService {
     public AppSettings getSettings() {
         AppSettings settings = settingsRepository.findById(1L)
                 .orElseGet(() -> settingsRepository.save(new AppSettings()));
-        if ("Cloth n Care".equals(settings.getBusinessName())) {
-            settings.setBusinessName("Cloth & Care");
+        if ("Cloth n Care".equals(settings.getBusinessName())
+                || "Cloth & Care".equals(settings.getBusinessName())
+                || "Pune Laundry".equals(settings.getBusinessName())
+                || "Cloth & Care Pune Laundry".equals(settings.getBusinessName())) {
+            settings.setBusinessName("Cloth & Care Pune");
             settingsRepository.save(settings);
         }
         return settings;

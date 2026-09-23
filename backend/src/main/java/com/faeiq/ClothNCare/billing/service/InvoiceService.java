@@ -130,7 +130,7 @@ public class InvoiceService {
 
     private void buildStoreHeader(Document document, AppSettings settings) {
         String businessName = settings.getBusinessName() == null || settings.getBusinessName().isBlank()
-                ? "Cloth n Care" : settings.getBusinessName();
+                ? "Cloth & Care Pune" : settings.getBusinessName();
 
         Paragraph name = new Paragraph(businessName, fontFor(businessName, 16f, Font.BOLD));
         name.setAlignment(Element.ALIGN_CENTER);

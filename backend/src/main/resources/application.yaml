@@ -12,7 +12,7 @@ spring:
       hibernate:
         format_sql: true
   application:
-    name: PuneLaundry
+    name: ClothAndCarePune
 
 # Secret must be at least 32 chars. Set the JWT_SECRET_KEY environment
 # variable when running (never commit a real secret to the repository).
